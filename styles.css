@@ -50,7 +50,6 @@
   cursor: pointer; /* Change cursor to pointer on hover */
   text-decoration: none; /* Remove underline from the link */
   font-size: 2rem; /* Set font size */
-  color: rgb(145, 185, 222); /* Default color for the text (not used due to transparency) */
 }
 
 /* Adjust the width and height of the SVG logo */

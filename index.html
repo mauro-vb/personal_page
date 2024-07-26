@@ -14,9 +14,15 @@
           <!-- Inline SVG -->
           <svg class="logo-image" version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
-            preserveAspectRatio="xMidYMid meet">
+            preserveAspectRatio="xMidYMid meet" class="logo-svg">
+            <defs>
+              <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#bcd2e0;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#4786ae;stop-opacity:1" />
+              </linearGradient>
+            </defs>
             <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
-              fill="currentColor" stroke="none">
+              fill="url(#logo-gradient)" stroke="none">
               <path d="M883 1123 c-12 -10 -28 -33 -34 -51 -9 -27 -8 -38 11 -75 28 -54 45
               -67 91 -67 30 0 43 7 68 35 39 45 42 101 8 141 -30 35 -110 44 -144 17z m95
               -25 c2 -12 -5 -19 -22 -24 -14 -3 -26 -10 -26 -15 0 -5 -9 -9 -20 -9 -25 0
@@ -32,7 +38,7 @@
               -76 -74 -21 8 -17 34 11 61 25 26 65 34 65 13z"/>
             </g>
           </svg>
-          <!--ADD TITLE HERE-->
+          Mauro V.B<!--ADD TITLE HERE-->
         </a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
