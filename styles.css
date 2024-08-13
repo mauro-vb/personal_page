@@ -4,59 +4,58 @@
   src: url(Meditative.ttf); /* Path to the font file */
 }
 
-/* Apply box-sizing, margin, padding, and font to all elements */
-* {
-  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+/* Apply base styling to the body */
+body {
+  background-color: rgb(145, 185, 222); /* Set the background color */
+  font-family: 'Meditative', sans-serif; /* Use the custom font */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  font-family: 'Meditative'; /* Set default font to 'Meditative' */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  min-height: 100vh; /* Ensure the body covers full height of the viewport */
 }
 
-/* Styling for the navbar container */
+/* Navbar Styling */
 .navbar {
-  background: #131313; /* Dark background color for the navbar */
-  height: 80px; /* Set height of the navbar */
+  background-color: rgb(145, 185, 222); /* Same color as the background */
+  height: 80px; /* Set the navbar height */
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
-  font-size: 1.2rem; /* Set font size */
-  position: sticky; /* Stick the navbar to the top of the viewport */
-  top: 0; /* Align navbar to the top */
+  font-size: 1.2rem; /* Set font size for navbar text */
+  position: sticky; /* Make the navbar stick to the top */
+  top: 0; /* Align the navbar to the top of the viewport */
   z-index: 999; /* Ensure navbar is above other elements */
+  width: 100%; /* Full width of the viewport */
+  margin-top: 60px;
 }
 
-/* Container for navbar items */
+/* Navbar container styling */
 .navbar__container {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space items evenly */
-  height: 80px; /* Match the height of the navbar */
-  z-index: 1; /* Layering above other elements */
+  align-items: center; /* Center items vertically */
   width: 100%; /* Full width */
-  max-width: 1300px; /* Maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0 50px; /* Padding on left and right sides */
+  max-width: 1300px; /* Maximum width */
+  padding: 0 50px; /* Add padding on the left and right */
 }
 
 /* Styling for the logo link */
 #navbar__logo {
-  background-color: #4786ae; /* Background color of the logo text */
-  background-image: linear-gradient(to top, #4786ae, #bcd2e0); /* Gradient background */
-  background-size: 100%; /* Ensure gradient covers the text */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  -moz-background-clip: text; /* Firefox-specific background clip for text */
-  -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
   cursor: pointer; /* Change cursor to pointer on hover */
   text-decoration: none; /* Remove underline from the link */
-  font-size: 2rem; /* Set font size */
+  font-size: 1.8rem; /* Set font size for logo text */
+  color: #000; /* Black text color for the logo */
 }
 
 /* Adjust the width and height of the SVG logo */
 #navbar__logo svg {
-  width: 80px; /* Adjust the width */
+  width: 150px; /* Adjust the width */
   height: auto; /* Maintain aspect ratio */
-  rotate: 25deg;
+  rotate: 25deg; /* Rotate the logo slightly */
+  margin-right: 15px;
 }
 
 /* Styling for the menu items */
@@ -64,7 +63,6 @@
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
   list-style: none; /* Remove bullet points from list */
-  text-align: center; /* Center text within menu items */
 }
 
 /* Styling for individual menu items */
@@ -74,44 +72,13 @@
 
 /* Styling for links in the navbar */
 .navbar__links {
-  color: rgb(145, 185, 222); /* Link text color */
+  color: #000; /* Black text color for the links */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   text-decoration: none; /* Remove underline from links */
-  padding: 0 1rem; /* Padding on left and right sides */
+  padding: 0 1rem; /* Padding on the left and right */
   height: 100%; /* Full height of the parent container */
-}
-
-/* Styling for buttons in the navbar */
-.navbar__btn {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  text-decoration: none; /* Remove underline from links */
-  padding: 0 1rem; /* Padding on left and right sides */
-  width: 100%; /* Full width of the parent container */
-}
-
-/* Styling for the button */
-.button {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  text-decoration: none; /* Remove underline from links */
-  padding: 10px 20px; /* Padding around button text */
-  height: 100%; /* Full height of the parent container */
-  border: none; /* Remove border */
-  outline: none; /* Remove outline */
-  border-radius: 35px; /* Round the corners */
-  background: rgb(145, 185, 222); /* Background color of the button */
-  color: #fff; /* Text color of the button */
-}
-
-/* Styling for button hover state */
-.button:hover {
-  background: #8bb797; /* Change background color on hover */
-  transition: all .1s ease; /* Smooth transition effect */
 }
 
 /* Styling for links in navbar hover state */
@@ -120,106 +87,127 @@
   transition: all .1s ease; /* Smooth transition effect */
 }
 
-/* Responsive styles for screens with a max-width of 960px */
+/* Main content area styling */
+.main-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Space the sections evenly */
+  align-items: center; /* Center items vertically */
+  padding: 50px 20px; /* Add padding around the content */
+  flex: 1; /* Allow the main content to grow and fill the space */
+}
+
+/* Intro section styling */
+.intro-section {
+  max-width: 300px; /* Limit the width of the intro section */
+  text-align: left; /* Align text to the left */
+  color: #000; /* Black text color */
+}
+
+.intro-section h1 {
+  font-size: 3rem; /* Set font size for the heading */
+  margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.intro-section p {
+  font-size: 1.5rem; /* Set font size for the paragraph */
+}
+
+/* Profile section styling */
+.profile-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the profile picture */
+  align-items: center; /* Center items vertically */
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+}
+
+.profile-container {
+  position: relative; /* Position relative to allow overlay */
+  max-width: 350px; /* Limit the width of the profile picture */
+  margin-bottom: 30px; /* Add margin below the picture */
+}
+
+.profile-picture {
+  border-radius: 40%; /* Make the picture round */
+  width: 100%; /* Full width of the container */
+}
+
+/* Sections container styling */
+.sections-container {
+  max-width: 300px; /* Limit the width of the sections container */
+  text-align: left; /* Align text to the left */
+  color: #000; /* Black text color */
+}
+
+.sections-container h2 {
+  font-size: 2rem; /* Set font size for section headings */
+  margin-top: 30px; /* Add margin above the section heading */
+  margin-bottom: 10px; /* Add margin below the section heading */
+}
+
+.sections-container p {
+  font-size: 1.2rem; /* Set font size for the paragraphs */
+}
+
+/* Remove default list styles */
+#sections-menu {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+#section__item {
+  margin-bottom: 20px; /* Space between items */
+}
+
+#section__item h2 a {
+  color: #000; /* Default color: black */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+/* Make Links look Like normal Text */
+.section-links {
+  color: #000; /* Default color: black */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Styling for links in sections hover state */
+.section-links:hover {
+  color: #8bb797; /* Change text color on hover */
+  transition: all .1s ease; /* Smooth transition effect */
+}
+
+
+
+#section__item h2 a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+#section__item h2 a:active {
+  color: #fff; /* Color when clicked (pressed) */
+  text-decoration: underline; /* Ensure underline persists */
+}
+
+/* Optional: Styling for focused links (accessible styling) */
+#section__item h2 a:focus {
+  outline: 2px solid #000; /* Outline for accessibility */
+  outline-offset: 4px; /* Offset for better visibility */
+}
+
+/* Responsive Styles for smaller screens */
 @media screen and (max-width: 960px) {
-  .navbar__container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space items evenly */
-    height: 80px; /* Match the height of the navbar */
-    z-index: 1; /* Layering above other elements */
-    width: 100%; /* Full width */
-    max-width: 1300px; /* Maximum width of the container */
-    padding: 0; /* Remove padding */
+
+  /* Ensure flexbox layout switches to a vertical stack on smaller screens */
+  .main-content {
+    flex-direction: column; /* Stack the sections vertically */
   }
 
-  .navbar__menu {
-    display: grid; /* Use grid layout for menu items */
-    grid-template-columns: auto; /* Single column grid */
-    margin: 0; /* Remove margin */
-    width: 100%; /* Full width */
-    position: absolute; /* Position absolutely */
-    top: -1000px; /* Initially hide the menu off-screen */
-    opacity: 0; /* Hide the menu initially */
-    transition: all .4s ease; /* Smooth transition effect */
-    height: 50vh; /* Height of the menu */
-    z-index: -1; /* Layering below other elements */
-    background: #131313; /* Background color of the menu */
-  }
-
-  /* Style for active state of the menu */
-  .navbar__menu.active {
-    background-color: #131313; /* Background color when menu is active */
-    top: 100%; /* Move menu into view */
-    opacity: 1; /* Show the menu */
-    transition: all .4s ease; /* Smooth transition effect */
-    height: 50vh; /* Height of the menu */
-    font-size: 1.6rem; /* Increase font size */
-  }
-
-  /* Styling for the logo link in mobile view */
-  #navbar__logo {
-    padding-left: 25px; /* Add left padding */
-  }
-
-  /* Styling for the bars in the mobile menu toggle */
-  .navbar__toggle .bar {
-    width: 25px; /* Width of each bar */
-    height: 3px; /* Height of each bar */
-    margin: 5px auto; /* Margin around each bar */
-    transition: all .3s ease-in-out; /* Smooth transition effect */
-    background: #fff; /* Background color of the bars */
-  }
-
-  .navbar__item {
-    width: 100%; /* Full width of the parent container */
-  }
-
-  /* Styling for links in mobile menu */
-  .navbar__links {
-    text-align: center; /* Center text within menu items */
-    padding: 2rem; /* Padding around link text */
-    width: 100%; /* Full width of the parent container */
-    display: table; /* Display as table for alignment */
-  }
-
-  /* Positioning of the mobile menu toggle button */
-  #mobile-menu {
-    position: absolute; /* Position absolutely */
-    top: 20%; /* Position from top */
-    right: 5%; /* Position from right */
-    transform: translate(5%,20%); /* Offset position */
-  }
-
-  .navbar__btn {
-    padding: 2rem; /* Padding around button text */
-  }
-
-  /* Styling for the button in mobile view */
-  .button {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    width: 80%; /* Set width */
-    height: 80px; /* Set height */
-    margin: 0; /* Remove margin */
-  }
-
-  /* Styling for the bars in the mobile menu toggle when active */
-  .navbar__toggle .bar {
-    display: block; /* Ensure bars are displayed */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
-
-  /* Style for active state of the mobile menu toggle */
-  #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0; /* Hide the middle bar */
-  }
-
-  #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); /* Rotate the top bar */
-  }
-
-  #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Rotate the bottom bar */
+  .intro-section,
+  .profile-section,
+  .sections-container {
+    max-width: 90%; /* Ensure sections take up more space on small screens */
+    text-align: center; /* Center text for a better mobile layout */
+    margin-bottom: 20px; /* Add margin below each section */
   }
 }

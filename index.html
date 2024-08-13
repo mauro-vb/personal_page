@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestPage</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <!-- Navbar section-->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/" id="navbar__logo">
-          <!-- Inline SVG -->
-          <svg class="logo-image" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauro Vazquez Bassat</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg" href="images/logo_white.svg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="#" id="navbar__logo">
+                <!-- Inline SVG -->
+                <svg class="logo-image" version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
             preserveAspectRatio="xMidYMid meet" class="logo-svg">
             <defs>
               <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#bcd2e0;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#4786ae;stop-opacity:1" />
+                <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
               </linearGradient>
             </defs>
             <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
@@ -37,48 +37,53 @@
               32 99 101 4 46 2 53 -26 81 -42 42 -101 42 -143 1z m81 -13 c-1 -22 -60 -80
               -76 -74 -21 8 -17 34 11 61 25 26 65 34 65 13z"/>
             </g>
-          </svg>
-          Mauro V.B<!--ADD TITLE HERE-->
-        </a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+                </svg>
+            Mauro<br>Vazquez<br>Bassat
+            </a>
+            <nav>
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="#" class="navbar__links">Home</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__links">About</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__links">Projects</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__links">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="/" class="navbar__links">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="/projects.html" class="navbar__links">Projects</a>
-          </li>
-          <li class="navbar__btn">
-            <a href="/projects.html" class="button">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </header>
 
-    <!-- Main page section-->
-     <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>
-            Personal Page
-          </h1>
-          <h2>
-            Mauro Vazquez Bassat
-          </h2>
-          <p>
-            My name is Mauro and welcome to my personal page (Portfolio Project for my Masters in HCI)
-          </p>
-          <button class="main__btn"><a href="/">Learn about me!</a></button>
-        </div>
-        <div class="main__img--container">
-          <img src="images/profile_picture.png" alt="profile-pic">
-        </div>
-      </div>
-     </div>
-    <script src="app.js"></script>
-  </body>
+    <main class="main-content">
+      <section class="intro-section">
+          <h1>Mauro</h1>
+          <p>Human Computer Interaction Student. Designer. Developer. Freelance teacher.</p>
+      </section>
+      <section class="profile-section">
+          <div class="profile-container">
+              <img src="images/tmp_foto.png" alt="Profile picture of Mauro" class="profile-picture">
+          </div>
+      </section>
+      <section class="sections-container">
+          <nav>
+              <ul id="sections-menu">
+                  <li class="section-item">
+                      <h2><a href="/" class="section-links">Skills</a></h2>
+                      <p>Languages, Public speaking, Programming, Writing...</p>
+                  </li>
+                  <li class="section-item">
+                      <h2><a href="/" class="section-links">Projects</a></h2>
+                      <p>University, Work, and Personal.</p>
+                  </li>
+                  <li class="section-item">
+                      <h2><a href="/" class="section-links">Hobbies</a></h2>
+                      <p>Game Dev, Climbing, Chess</p>
+                  </li>
+              </ul>
+          </nav>
+      </section>
+  </main>
+
+
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+</body>
 </html>
