@@ -4,6 +4,7 @@
   src: url(Meditative.ttf); /* Path to the font file */
 }
 
+
 /* Apply base styling to the body */
 body {
   background-color: rgb(145, 185, 222); /* Set the background color */
